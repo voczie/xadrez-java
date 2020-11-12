@@ -8,10 +8,18 @@
  */
 public class Peca {
 
-    public static final int PEDRA_BRANCA = 0;
-    public static final int DAMA_BRANCA = 1;
-    public static final int PEDRA_VERMELHA = 2;
-    public static final int DAMA_VERMELHA = 3;
+    public static final int TORRE_BRANCA = 0;
+    public static final int CAVALO_BRANCO = 1;
+    public static final int BISPO_BRANCO = 2;
+    public static final int RAINHA_BRANCA = 3;
+    public static final int REI_BRANCO = 4;
+    public static final int PEAO_BRANCO = 5;
+    public static final int TORRE_PRETA = 6;
+    public static final int CAVALO_PRETO = 7;
+    public static final int BISPO_PRETO = 8;
+    public static final int RAINHA_PRETA = 9;
+    public static final int REI_PRETO = 10;
+    public static final int PEAO_PRETO = 11;
 
     private Casa casa;
     private int tipo;
@@ -34,10 +42,18 @@ public class Peca {
 
     /**
      * Valor    Tipo
-     *   0   Branca (Pedra)
-     *   1   Branca (Dama)
-     *   2   Vermelha (Pedra)
-     *   3   Vermelha (Dama)
+     *   0   Branca (Torre)
+     *   1   Branca (Cavalo)
+     *   2   Branca (Bispo)
+     *   3   Branca (Rainha)
+     *   4   Branca (Rei)
+     *   5   Branca (Peao)
+     *   6   Preta  (Torre)
+     *   7   Preta  (Cavalo)
+     *   8   Preta  (Bispo)
+     *   9   Preta  (Rainha)
+     *   10  Preta  (Rei)
+     *   11  Preta  (Peao)
      * @return o tipo da peca.
      */
     public int getTipo() {
