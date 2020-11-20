@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.target=Peca
+comment0.text=\r\n\ Representa\ uma\ Pe\uFFFDa\ do\ jogo.\r\n\ Possui\ uma\ casa\ e\ um\ tipo\ associado.\r\n\ \r\n\ @author\ Alan\ Moraes\ &lt;alan@ci.ufpb.br&gt;\r\n\ @author\ Leonardo\ Villeth\ &lt;lvilleth@cc.ci.ufpb.br&gt;\r\n
+comment1.params=casa\ tipo
+comment1.target=Peca(Casa,\ int)
+comment2.params=destino
+comment2.target=void\ mover(Casa)
+comment2.text=\r\n\ Movimenta\ a\ peca\ para\ uma\ nova\ casa.\r\n\ @param\ destino\ nova\ casa\ que\ ira\ conter\ esta\ peca.\r\n
+comment3.params=
+comment3.target=int\ getTipo()
+comment3.text=\r\n\ Valor\ \ \ \ Tipo\r\n\ \ \ 0\ \ \ Branca\ (Peao)\r\n\ \ \ 1\ \ \ Preta\ (Peao)\r\n\ \ \ 2\ \ \ Branca\ (Torre)\r\n\ \ \ 3\ \ \ Preta\ (Torre)\r\n\ \ \ 4\ \ \ Branca\ (Bispo)\r\n\ \ \ 5\ \ \ Preta\ (Bispo)\r\n\ \ \ 6\ \ \ Branca\ \ (Cavalo)\r\n\ \ \ 7\ \ \ Preta\ \ (Cavalo)\r\n\ \ \ 8\ \ \ Branca\ \ (Rainha)\r\n\ \ \ 9\ \ \ Preta\ \ (Rainha)\r\n\ \ \ 10\ \ Branca\ \ (Rei)\r\n\ \ \ 11\ \ Preta\ \ (Rei)\r\n\ @return\ o\ tipo\ da\ peca.\r\n
+numComments=4

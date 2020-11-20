@@ -1,0 +1,18 @@
+#BlueJ class context
+comment0.target=Casa
+comment0.text=\r\n\ Representa\ uma\ Casa\ do\ tabuleiro.\r\n\ Possui\ uma\ posi\uFFFDao\ (i,j)\ e\ pode\ conter\ uma\ Pe\uFFFDa.\r\n\ \r\n\ @author\ Alan\ Moraes\ &lt;alan@ci.ufpb.br&gt;\r\n\ @author\ Leonardo\ Villeth\ &lt;lvilleth@cc.ci.ufpb.br&gt;\r\n
+comment1.params=x\ y
+comment1.target=Casa(int,\ int)
+comment2.params=peca
+comment2.target=void\ colocarPeca(Peca)
+comment2.text=\r\n\ @param\ peca\ a\ Pe\uFFFDa\ a\ ser\ posicionada\ nesta\ Casa.\r\n
+comment3.params=
+comment3.target=void\ removerPeca()
+comment3.text=\r\n\ Remove\ a\ peca\ posicionada\ nesta\ casa,\ se\ houver.\r\n
+comment4.params=
+comment4.target=Peca\ getPeca()
+comment4.text=\r\n\ @return\ a\ Peca\ posicionada\ nesta\ Casa,\ ou\ Null\ se\ a\ casa\ estiver\ livre.\r\n
+comment5.params=
+comment5.target=boolean\ possuiPeca()
+comment5.text=\r\n\ @return\ true\ se\ existe\ uma\ pe\uFFFDa\ nesta\ casa,\ caso\ contrario\ false.\r\n
+numComments=6
