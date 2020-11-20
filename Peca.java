@@ -8,18 +8,18 @@
  */
 public class Peca {
 
-    public static final int TORRE_BRANCA = 0;
-    public static final int CAVALO_BRANCO = 1;
-    public static final int BISPO_BRANCO = 2;
-    public static final int RAINHA_BRANCA = 3;
-    public static final int REI_BRANCO = 4;
-    public static final int PEAO_BRANCO = 5;
-    public static final int TORRE_PRETA = 6;
+    public static final int PEAO_BRANCO = 0;
+    public static final int PEAO_PRETO = 1;
+    public static final int TORRE_BRANCA = 2;
+    public static final int TORRE_PRETA = 3;
+    public static final int BISPO_BRANCO = 4;
+    public static final int BISPO_PRETO = 5;
+    public static final int CAVALO_BRANCO = 6;
     public static final int CAVALO_PRETO = 7;
-    public static final int BISPO_PRETO = 8;
+    public static final int RAINHA_BRANCA = 8;
     public static final int RAINHA_PRETA = 9;
-    public static final int REI_PRETO = 10;
-    public static final int PEAO_PRETO = 11;
+    public static final int REI_PRETO = 11;
+    public static final int REI_BRANCO = 10;
 
     private Casa casa;
     private int tipo;
@@ -42,18 +42,18 @@ public class Peca {
 
     /**
      * Valor    Tipo
-     *   0   Branca (Torre)
-     *   1   Branca (Cavalo)
-     *   2   Branca (Bispo)
-     *   3   Branca (Rainha)
-     *   4   Branca (Rei)
-     *   5   Branca (Peao)
-     *   6   Preta  (Torre)
+     *   0   Branca (Peao)
+     *   1   Preta (Peao)
+     *   2   Branca (Torre)
+     *   3   Preta (Torre)
+     *   4   Branca (Bispo)
+     *   5   Preta (Bispo)
+     *   6   Branca  (Cavalo)
      *   7   Preta  (Cavalo)
-     *   8   Preta  (Bispo)
+     *   8   Branca  (Rainha)
      *   9   Preta  (Rainha)
-     *   10  Preta  (Rei)
-     *   11  Preta  (Peao)
+     *   10  Branca  (Rei)
+     *   11  Preta  (Rei)
      * @return o tipo da peca.
      */
     public int getTipo() {
