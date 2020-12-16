@@ -69,14 +69,39 @@ public class Peca {
     /** Método verifMov criado para verificar se a diferenca entre as coordenadas da casa destino e da casa origem condizem com o movimento de cada tipo de peca. 
      * Se condisser, ele permite a movimentacao da peca para a casa destino.
      * 
-     * Recebe parâmetros das diferenças entre as coordenadas x = (destinoX - origemX), y = (destinoY - origemY), origemY = origemY.
-     * @return true ou false para a movimentacao da peca.
+     * Recebe parâmetros tipo -> int que nos diz o tipo da peca que estamos movendo;
+     * destinoX -> int que nos diz a posicao X do destino; destinoY -> int que nos diz a posicao Y do destino;
+     * origemX -> int que nos diz a posicao X do origem; origemY -> int que nos diz a posicao Y do origem.
+     * tabuleiro -> recebe o tabuleiro da classe Jogo.
+     * 
+     * @return 1 se o movimento puder ser feito pela peca;
+     * @return 0 se o movimento não puder ser feito;
+     * @return -1 se nao ha movimento
      */
-    public boolean verifMov(int x, int y, int origemY, int tipo) {
-        boolean resultado;
-        resultado = verifPeca(x, y);
+    public int verifMov(int tipo, int destinoX, int destinoY, int origemX, int origemY, Tabuleiro tabuleiro) {
+        int x = destinoX - origemX;
+        int y = destinoY - origemY;
         
-        return resultado;
+        if((x == 0) && (y == 0)){ //Se nao ha movimento (diferenca entre destino e origem e zero tanto no x como no y, entao retorna -1
+            return -1;
+        }
+        
+        boolean caminhoLivre = this.verifCaminhoCome(tipo, destinoX, destinoY, origemX, origemY, tabuleiro);
+        
+        if(caminhoLivre){ //Verifica se o trajeto esta livre para a peca continuar
+            boolean resultado;
+            resultado = verifPeca(x, y);
+            
+            if(resultado){
+                return 1;
+            }
+            else{
+                return 0;
+            }
+        }
+        else{ //Se nao estiver, retorna 0
+            return 0;
+        }
     }
     
     protected boolean verifPeca(int valorX, int valorY){
@@ -91,6 +116,7 @@ public class Peca {
      * destinoX -> int que nos diz a posicao X do destino; destinoY -> int que nos diz a posicao Y do destino;
      * origemX -> int que nos diz a posicao X do origem; origemY -> int que nos diz a posicao Y do origem.
      * tabuleiro -> recebe o tabuleiro da classe Jogo.
+     * 
      * @return true se nao existe uma peca no caminho feito pela peca
      */
     public boolean verifCaminhoCome(int tipo, int destinoX, int destinoY, int origemX, int origemY, Tabuleiro tabuleiro){

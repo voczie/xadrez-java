@@ -25,7 +25,17 @@ public class Cavalo extends Peca
      * @return true se nao existe uma peca no caminho feito pela peca
      */
     public boolean verifCaminhoCome(int tipo, int destinoX, int destinoY, int origemX, int origemY, Tabuleiro tabuleiro){
-        return true; //A peca é um cavalo, ele pode pular pecas proprias e pecas inimigas, logo tem passe livre dessa verificacao 
+        Casa destino = tabuleiro.getCasa(destinoX, destinoY);
+        Peca pecaDestino = destino.getPeca();
+        
+        int tipoDestino = pecaDestino != null ? pecaDestino.getCor() : -1;  // Condicao (retorna boolean) ? se true, atribui esse valor : se false, atribui esse valor.
+        
+        if((this.getCor() == tipoDestino)){ //Se a cor da peca da casa de origem for igual a cor da peca da casa atual, retorna falso, pois nao pode ser comida.
+            return false;
+        }
+        else{
+            return true; //A peca é um cavalo, ele pode pular pecas proprias e pecas inimigas, logo tem passe livre da verificacao do trajeto
+        }
     }
     
     /**

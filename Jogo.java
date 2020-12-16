@@ -138,23 +138,15 @@ public class Jogo {
         
         Peca peca = origem.getPeca();
         int tipoPeca = peca.getTipo();
-        boolean movimento = peca.verifMov(difX, difY, origemY, tipoPeca); //Aqui eu uso o metodo peca.verifMov() para ver se o movimento condiz com o tipo de peca e armazeno em "movimento"
+        int movimento = peca.verifMov(tipoPeca, destinoX, destinoY, origemX, origemY, tabuleiro); //Aqui eu uso o metodo peca.verifMov() para ver se o movimento condiz com o tipo 
+                                                                                                        //de peca e armazeno em "movimento"
 
-        if((difX == 0) && (difY == 0)){
-            return -1;
-        }
-        else if(movimento){
-            boolean caminhoLivre = peca.verifCaminhoCome(tipoPeca, destinoX, destinoY, origemX, origemY, tabuleiro);
-            if(caminhoLivre){
-                peca.mover(destino);
-                return 1;
-            }
-            else{
-                return 0;
-            }
+        if(movimento == 1){
+            peca.mover(destino);
+            return movimento;
         }
         else{
-            return 0;
+            return movimento;
         }
     }
     

@@ -54,18 +54,18 @@ public class JanelaPrincipal extends JFrame {
             int exito = jogo.moverPeca(casaClicadaOrigem.getPosicaoX(), casaClicadaOrigem.getPosicaoY(),
                     casaClicadaDestino.getPosicaoX(), casaClicadaDestino.getPosicaoY());
                     
-            if(exito == -1){
+            if(exito == -1){ //Caso a peca nao se mova
                 casaClicadaOrigem.atenuar();
                 primeiroClique = true;
                 atualizar();
             }
-            else if(exito == 0){
+            else if(exito == 0){ //Caso a peca nao possa se mover
                 JOptionPane.showMessageDialog(this, "Movimento inválido");
                 casaClicadaOrigem.atenuar();
                 primeiroClique = true;
                 atualizar();
             }
-            else{
+            else{ //Caso a peca possa se mover
                 casaClicadaOrigem.atenuar();
                 primeiroClique = true;
                 turnoJogo = jogo.atualizarTurno(turnoJogo);
